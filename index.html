@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Emergency appeal: Ifey needs the iPhone 18 Pro Max. Every naira counts.">
+<meta property="og:title" content="Operation Pro Max — An Appeal for Ifey">
+<meta property="og:description" content="She shows up for everyone. Now her phone needs us. Help get Ifey the iPhone 18 Pro Max.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#3b1033">
+<title>Operation Pro Max</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;0,6..96,700;1,6..96,500;1,6..96,700&family=Jost:wght@400;500;600&display=swap">
+<style>
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0}
+[hidden]{display:none!important}
+img{max-width:100%}
+/* Layout: a glossy magazine "cover" for one woman — blush paper, plum ink, gold foil meter, soft rounded sheets */
+:root{
+  --paper:#fbeef1; --sheet:#ffffff; --ink:#3b1033; --muted:#8a5a78; --rule:#f0d3dd;
+  --rose:#c2386f; --gold:#b98a3e; --gold-2:#e7c77f; --meter-bg:#f5dde5; --on-rose:#ffffff;
+  --glow:rgba(194,56,111,.14);
+  --display:"Bodoni Moda","Didot","Bodoni 72",Georgia,serif;
+  --body:"Jost","Avenir Next","Segoe UI",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#1c0b19; --sheet:#2a1226; --ink:#fbe7ef; --muted:#c79bb6; --rule:#43213c;
+  --rose:#ff6fa3; --gold:#e2b964; --gold-2:#f6dc9e; --meter-bg:#3a1b34; --on-rose:#2a0c22;
+  --glow:rgba(255,111,163,.18); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#1c0b19; --sheet:#2a1226; --ink:#fbe7ef; --muted:#c79bb6; --rule:#43213c;
+  --rose:#ff6fa3; --gold:#e2b964; --gold-2:#f6dc9e; --meter-bg:#3a1b34; --on-rose:#2a0c22;
+  --glow:rgba(255,111,163,.18); color-scheme:dark}
+
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.65;
+  background-image:radial-gradient(60rem 30rem at 85% -10%,var(--glow),transparent 70%),radial-gradient(40rem 24rem at -10% 30%,var(--glow),transparent 70%);
+  background-attachment:fixed;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:680px;margin:0 auto;padding-block:28px 72px;display:flex;flex-direction:column;gap:34px}
+a{color:var(--rose)}
+:focus-visible{outline:2px solid var(--rose);outline-offset:3px;border-radius:6px}
+
+/* Masthead */
+.topbar{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;
+  font-size:12px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);
+  border-bottom:1px solid var(--rule);padding-bottom:14px}
+.stamp{font-family:var(--display);font-style:italic;font-size:15px;letter-spacing:.02em;text-transform:none;color:var(--gold)}
+
+h1{font-family:var(--display);font-weight:500;line-height:1.02;font-size:clamp(2.7rem,11vw,5rem);margin:0;letter-spacing:-.01em;text-wrap:balance}
+h1 em{font-style:italic;font-weight:700;color:var(--rose)}
+h2{font-family:var(--display);font-weight:500;font-style:italic;font-size:1.9rem;line-height:1.1;margin:0}
+.lede{font-size:1.15rem;margin:0;max-width:58ch;color:var(--ink)}
+.eyebrow{font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin:0}
+
+/* Meter */
+.meter{background:var(--sheet);border:1px solid var(--rule);border-radius:24px;padding:24px;display:flex;flex-direction:column;gap:14px;
+  box-shadow:0 18px 40px -24px var(--glow)}
+.meter-figs{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;font-variant-numeric:tabular-nums}
+.raised{font-family:var(--display);font-weight:700;font-size:clamp(2rem,8vw,2.8rem);line-height:1}
+.goal{color:var(--muted);font-size:15px}
+.bar{height:14px;background:var(--meter-bg);border-radius:999px;position:relative;overflow:hidden}
+.fill{position:absolute;inset:0 auto 0 0;border-radius:999px;width:0;
+  background:linear-gradient(90deg,var(--rose),var(--gold) 70%,var(--gold-2));
+  transition:width 1.4s cubic-bezier(.2,.8,.2,1)}
+.fill::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,transparent 30%,rgba(255,255,255,.55) 50%,transparent 70%);
+  background-size:200% 100%;animation:shimmer 2.8s linear infinite}
+@keyframes shimmer{from{background-position:150% 0}to{background-position:-50% 0}}
+.meter-foot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:14px;color:var(--muted);font-variant-numeric:tabular-nums}
+.meter-foot b{color:var(--ink);font-weight:600}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--body);font-weight:600;
+  letter-spacing:.08em;text-transform:uppercase;font-size:14px;background:var(--rose);color:var(--on-rose);text-decoration:none;
+  padding:17px 30px;border:0;border-radius:999px;cursor:pointer;align-self:flex-start;
+  box-shadow:0 12px 26px -12px var(--rose);transition:transform .15s ease,box-shadow .15s ease}
+.btn:hover{transform:translateY(-1px);box-shadow:0 16px 30px -12px var(--rose)}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--rule);box-shadow:none;padding:11px 20px;font-size:12px}
+.btn:disabled{opacity:.6;cursor:wait;transform:none}
+
+/* The situation */
+.sitrep{background:var(--sheet);border:1px solid var(--rule);border-radius:24px;padding:8px 24px}
+.sitrep-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;padding:14px 0;border-bottom:1px dashed var(--rule);align-items:baseline}
+.sitrep-row:last-child{border-bottom:0}
+.sitrep-row:first-child{padding-top:18px}
+.sitrep-row span:last-child{font-weight:600;text-align:right;font-variant-numeric:tabular-nums}
+.crit{color:var(--rose)}
+
+.story{display:flex;flex-direction:column;gap:16px;max-width:60ch}
+.story p{margin:0}
+blockquote{margin:6px 0;padding:0;font-family:var(--display);font-style:italic;font-size:1.45rem;line-height:1.3;color:var(--rose);text-wrap:balance}
+
+/* Love languages */
+.impact{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
+.impact div{background:var(--sheet);border:1px solid var(--rule);border-radius:20px;padding:20px;display:flex;flex-direction:column;gap:6px}
+.impact .amt{font-family:var(--display);font-weight:700;font-size:1.5rem;color:var(--ink);font-variant-numeric:tabular-nums}
+.impact p{margin:0;font-size:15px;color:var(--muted)}
+
+/* Account card — styled like a premium bank card */
+.acct{border-radius:26px;padding:6px 4px;color:#fff7fb;
+  background:linear-gradient(135deg,#5a1849 0%,#3b1033 45%,#2a0b25 100%);
+  box-shadow:0 24px 50px -24px rgba(59,16,51,.55);position:relative;overflow:hidden;display:flex;flex-direction:column}
+.acct::before{content:"";position:absolute;inset:-40% -20% auto auto;width:70%;aspect-ratio:1;border-radius:50%;
+  background:radial-gradient(circle,rgba(231,199,127,.35),transparent 65%);pointer-events:none}
+.acct-row{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:12px;padding:16px 20px;border-bottom:1px solid rgba(255,255,255,.12);position:relative}
+.acct-row:last-child{border-bottom:0}
+.acct-row .k{font-size:11px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:#e7c77f;display:block}
+.acct-row .v{font-size:1.15rem;font-weight:500;overflow-wrap:anywhere}
+.acct-row .v.num{font-family:var(--display);font-weight:700;font-size:clamp(1.7rem,8vw,2.3rem);letter-spacing:.08em;font-variant-numeric:tabular-nums}
+.copy{font-family:var(--body);font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;background:rgba(255,255,255,.12);
+  color:#fff7fb;border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:9px 14px;cursor:pointer;white-space:nowrap}
+.copy.done{background:#e7c77f;color:#3b1033;border-color:#e7c77f}
+
+/* Form */
+.log{background:var(--sheet);border:1px solid var(--rule);border-radius:24px;padding:24px;display:flex;flex-direction:column;gap:16px}
+.field{display:flex;flex-direction:column;gap:6px}
+.field label{font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.opt{text-transform:none;letter-spacing:0;font-weight:400}
+input:not([type]),input[inputmode],textarea{font:inherit;font-size:17px;color:var(--ink);background:var(--paper);
+  border:1px solid var(--rule);border-radius:14px;padding:13px 16px;width:100%}
+input:focus,textarea:focus{border-color:var(--rose);outline:none;box-shadow:0 0 0 4px var(--glow)}
+input:disabled{opacity:.5}
+.check{display:flex;gap:10px;align-items:center;font-size:15px;color:var(--muted);cursor:pointer}
+.check input{width:18px;height:18px;accent-color:var(--rose)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips button{font-family:var(--body);font-size:14px;font-weight:500;background:transparent;color:var(--ink);border:1px solid var(--rule);border-radius:999px;padding:8px 14px;cursor:pointer;font-variant-numeric:tabular-nums}
+.chips button:hover{border-color:var(--rose);color:var(--rose)}
+.note{font-size:15px;color:var(--muted);margin:0}
+.err{color:var(--rose);margin:0;font-size:15px}
+.ok{color:var(--gold);margin:0;font-weight:600}
+
+/* Wall */
+.wall-wrap{display:flex;flex-direction:column;gap:14px}
+.wall{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.wall li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2px 16px;padding:16px 18px;background:var(--sheet);border:1px solid var(--rule);border-radius:18px}
+.wall .who{font-weight:600;min-width:0;overflow-wrap:anywhere}
+.wall .amt{font-family:var(--display);font-weight:700;color:var(--rose);font-variant-numeric:tabular-nums}
+.wall .msg{grid-column:1/-1;font-family:var(--display);font-style:italic;color:var(--muted);font-size:1.05rem;overflow-wrap:anywhere}
+.wall .when{grid-column:1/-1;font-size:12px;letter-spacing:.08em;color:var(--muted)}
+.wall li.new{animation:bloom 1.8s ease-out}
+.wall .empty{display:block;color:var(--muted);font-style:italic}
+@keyframes bloom{from{box-shadow:0 0 0 6px var(--glow);border-color:var(--rose)}to{box-shadow:0 0 0 0 transparent}}
+
+footer{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);border-top:1px solid var(--rule);padding-top:16px;text-align:center}
+@media (prefers-reduced-motion:reduce){.fill{transition:none}.fill::after,.wall li.new{animation:none}.btn{transition:none}}
+</style>
+</head>
+<body>
+
+
+<div class="wrap">
+  <div class="topbar">
+    <span>The Pro Max Edition · Vol. 18</span>
+    <span class="stamp">with love, from her people</span>
+  </div>
+
+  <!-- ===== VIEW: HOME ===== -->
+  <section id="view-home" class="wrap" style="padding:0">
+    <p class="eyebrow">A love appeal · Lagos</p>
+    <h1>She shows up<br>for everyone.<br><em>Now it's our turn.</em></h1>
+    <p class="lede">Ifey has remembered every birthday, answered every "are you around?" and hyped every one of us in the group chat. Her phone has given everything it has. Tonight, we ask her friends to rally and get her the iPhone 18 Pro Max.</p>
+
+    <div class="meter" data-meter>
+      <p class="eyebrow">The Pro Max fund</p>
+      <div class="meter-figs">
+        <span class="raised" data-raised>₦0</span>
+        <span class="goal">of <span data-goal>₦0</span> goal</span>
+      </div>
+      <div class="bar" role="progressbar" aria-label="Amount raised" aria-valuemin="0" aria-valuemax="100" data-bar><div class="fill" data-fill></div></div>
+      <div class="meter-foot"><span><b data-pct>0%</b> funded</span><span><b data-left>₦0</b> to go</span><span><b data-donors>0</b> donors</span></div>
+    </div>
+
+    <a class="btn" href="#give">Send some love →</a>
+
+    <div class="sitrep">
+      <div class="sitrep-row"><h2>The situation</h2><span></span></div>
+      <div class="sitrep-row"><span>Battery health</span><span class="crit">58%</span></div>
+      <div class="sitrep-row"><span>Selfies retaken because the camera "didn't get it"</span><span class="crit">Countless</span></div>
+      <div class="sitrep-row"><span>"Storage almost full" alerts this week</span><span>31</span></div>
+      <div class="sitrep-row"><span>Photos deleted to make space for new photos</span><span>400+</span></div>
+      <div class="sitrep-row"><span>Times she's said "my phone is about to die, I'll call you back"</span><span class="crit">Daily</span></div>
+    </div>
+
+    <div class="story">
+      <h2>Her story</h2>
+      <p>This phone has been through it all with her: long workdays, longer voice notes, every owambe, every dinner, every "send me the pictures" that she actually sent.</p>
+      <p>Now it dies before lunch, the camera can no longer do her justice, and the charger follows her everywhere like a bodyguard. A woman of her standing deserves better.</p>
+      <blockquote>"Wait, let me take it again." — Ifey, to a camera that simply cannot keep up</blockquote>
+      <p>The iPhone 18 Pro Max will give her the battery, the camera and the storage she has earned many times over. Your contribution, however small, brings that day closer.</p>
+    </div>
+
+    <div class="impact">
+      <div><span class="amt">₦5,000</span><p>Buys one more good selfie. Spiritually.</p></div>
+      <div><span class="amt">₦20,000</span><p>Funds a corner of the camera bump.</p></div>
+      <div><span class="amt">₦50,000+</span><p>You are now on the Pro Max Inner Circle. She will know.</p></div>
+    </div>
+
+    <div class="wall-wrap">
+      <h2>Her people</h2>
+      <ul class="wall" data-wall></ul>
+    </div>
+
+    <a class="btn" href="#give">I'm in. Show me the account →</a>
+  </section>
+
+  <!-- ===== VIEW: GIVE ===== -->
+  <section id="view-give" class="wrap" style="padding:0" hidden>
+    <a class="btn ghost" href="/">← Back to the appeal</a>
+    <p class="eyebrow">Send love · Bank transfer</p>
+    <h1>Send love.<br><em>Send it now.</em></h1>
+    <p class="lede">Transfer any amount to the account below. Every naira goes straight to Ifey's Pro Max fund.</p>
+
+    <div class="acct">
+      <div class="acct-row"><div><span class="k">Bank</span><span class="v" data-bank></span></div><span></span></div>
+      <div class="acct-row"><div><span class="k">Account number</span><span class="v num" data-acctnum></span></div><button class="copy" id="copyBtn" type="button">Copy</button></div>
+      <div class="acct-row" id="acctNameRow"><div><span class="k">Account name</span><span class="v" data-acctname></span></div><span></span></div>
+      <div class="acct-row"><div><span class="k">Narration</span><span class="v" data-narration></span></div><button class="copy" id="copyNar" type="button">Copy</button></div>
+    </div>
+
+    <div class="meter" data-meter>
+      <p class="eyebrow">Where we are</p>
+      <div class="meter-figs">
+        <span class="raised" data-raised>₦0</span>
+        <span class="goal">of <span data-goal>₦0</span> goal</span>
+      </div>
+      <div class="bar" role="progressbar" aria-label="Amount raised" aria-valuemin="0" aria-valuemax="100" data-bar><div class="fill" data-fill></div></div>
+      <div class="meter-foot"><span><b data-pct>0%</b> funded</span><span><b data-left>₦0</b> to go</span><span><b data-donors>0</b> donors</span></div>
+    </div>
+
+    <form class="log" id="logForm" novalidate>
+      <h2>Sent it? Sign the wall.</h2>
+      <p class="note">Add your contribution so it shows on the wall and moves the meter.</p>
+      <div class="field">
+        <label for="fName">Your name</label>
+        <input id="fName" name="name" maxlength="40" autocomplete="name" placeholder="e.g. Tolu">
+      </div>
+      <label class="check" for="fAnon"><input type="checkbox" id="fAnon"> Show me as "Anonymous well-wisher"</label>
+      <div class="field">
+        <label for="fAmount">Amount sent (₦)</label>
+        <input id="fAmount" name="amount" inputmode="numeric" placeholder="e.g. 10,000" required>
+        <div class="chips" id="chips">
+          <button type="button" data-amt="5000">₦5,000</button>
+          <button type="button" data-amt="10000">₦10,000</button>
+          <button type="button" data-amt="20000">₦20,000</button>
+          <button type="button" data-amt="50000">₦50,000</button>
+        </div>
+      </div>
+      <div class="field">
+        <label for="fMsg">A word for Ifey <span class="opt">(optional)</span></label>
+        <textarea id="fMsg" name="message" maxlength="140" rows="2" placeholder="You deserve this, babe."></textarea>
+      </div>
+      <p class="err" id="formErr" role="alert" hidden></p>
+      <button class="btn" type="submit" id="submitBtn">Sign the wall</button>
+      <p class="ok" id="formOk" role="status" hidden></p>
+    </form>
+
+    <div class="wall-wrap">
+      <h2>Her people</h2>
+      <ul class="wall" data-wall></ul>
+    </div>
+  </section>
+
+  <footer>Operation Pro Max · The meter updates as contributions are logged.</footer>
+</div>
+
+<script>
+/* ===== EDIT THESE ===== */
+const CONFIG = {
+  goal: 2800000,                 // target in naira
+  bank: "Zenith Bank",
+  accountNumber: "2251572183",
+  accountName: "",               // leave "" to hide the row
+  narration: "IFEY PRO MAX"
+};
+/* ====================== */
+
+const API = "/api/contributions";
+const ngn = n => "₦" + Math.round(n).toLocaleString("en-NG");
+const $ = id => document.getElementById(id);
+const setAll = (sel, v) => document.querySelectorAll(sel).forEach(el => el.textContent = v);
+
+let lastIds = new Set();
+
+function ago(iso){
+  const s = Math.max(0, (Date.now() - new Date(iso)) / 1000);
+  if (s < 60) return "just now";
+  if (s < 3600) return Math.floor(s / 60) + " min ago";
+  if (s < 86400) return Math.floor(s / 3600) + " h ago";
+  return new Date(iso).toLocaleDateString("en-NG", { day: "numeric", month: "short" });
+}
+
+function paintMeter(total, count){
+  const pct = Math.min(100, CONFIG.goal ? total / CONFIG.goal * 100 : 0);
+  setAll("[data-raised]", ngn(total));
+  setAll("[data-goal]", ngn(CONFIG.goal));
+  setAll("[data-pct]", Math.floor(pct) + "%");
+  setAll("[data-left]", ngn(Math.max(0, CONFIG.goal - total)));
+  setAll("[data-donors]", count);
+  document.querySelectorAll("[data-bar]").forEach(b => b.setAttribute("aria-valuenow", Math.floor(pct)));
+  requestAnimationFrame(() => document.querySelectorAll("[data-fill]").forEach(f => f.style.width = pct + "%"));
+}
+
+function paintWall(items){
+  document.querySelectorAll("[data-wall]").forEach(ul => {
+    ul.replaceChildren();
+    if (!items.length) {
+      const li = document.createElement("li");
+      li.innerHTML = '<span class="empty">No names yet. Be the first to sign.</span>';
+      ul.append(li);
+      return;
+    }
+    items.slice(0, 50).forEach(it => {
+      const li = document.createElement("li");
+      if (lastIds.size && !lastIds.has(it.id)) li.className = "new";
+      const who = document.createElement("span"); who.className = "who"; who.textContent = it.name;
+      const amt = document.createElement("span"); amt.className = "amt"; amt.textContent = ngn(it.amount);
+      li.append(who, amt);
+      if (it.message) { const m = document.createElement("span"); m.className = "msg"; m.textContent = "“" + it.message + "”"; li.append(m); }
+      const w = document.createElement("span"); w.className = "when"; w.textContent = ago(it.at); li.append(w);
+      ul.append(li);
+    });
+  });
+  lastIds = new Set(items.map(i => i.id));
+}
+
+async function load(){
+  try {
+    const r = await fetch(API, { cache: "no-store" });
+    if (!r.ok) throw new Error();
+    const d = await r.json();
+    paintMeter(d.total, d.count);
+    paintWall(d.items);
+  } catch (e) {
+    paintMeter(0, 0);
+  }
+}
+
+function paintStatic(){
+  setAll("[data-bank]", CONFIG.bank);
+  setAll("[data-acctnum]", CONFIG.accountNumber);
+  setAll("[data-acctname]", CONFIG.accountName);
+  setAll("[data-narration]", CONFIG.narration);
+  $("acctNameRow").hidden = !CONFIG.accountName;
+}
+
+function route(){
+  const give = location.hash === "#give" || /\/give\/?$/.test(location.pathname);
+  $("view-home").hidden = give;
+  $("view-give").hidden = !give;
+  window.scrollTo(0, 0);
+}
+
+function wireCopy(btnId, getText){
+  const btn = $(btnId);
+  btn.addEventListener("click", () => {
+    const ok = () => { btn.textContent = "Copied"; btn.classList.add("done"); setTimeout(() => { btn.textContent = "Copy"; btn.classList.remove("done"); }, 1800); };
+    const fallback = () => {
+      const r = document.createRange(); r.selectNodeContents(btn.parentElement.querySelector(".v"));
+      const s = getSelection(); s.removeAllRanges(); s.addRange(r); btn.textContent = "Selected";
+    };
+    try { navigator.clipboard.writeText(getText()).then(ok, fallback); } catch (e) { fallback(); }
+  });
+}
+
+/* Form */
+const amountInput = $("fAmount");
+const parseAmt = v => Number(String(v).replace(/[^\d]/g, ""));
+amountInput.addEventListener("input", () => {
+  const n = parseAmt(amountInput.value);
+  amountInput.value = n ? n.toLocaleString("en-NG") : "";
+});
+$("chips").addEventListener("click", e => {
+  const b = e.target.closest("button[data-amt]"); if (!b) return;
+  amountInput.value = Number(b.dataset.amt).toLocaleString("en-NG");
+});
+$("fAnon").addEventListener("change", e => { $("fName").disabled = e.target.checked; });
+
+$("logForm").addEventListener("submit", async e => {
+  e.preventDefault();
+  const err = $("formErr"), ok = $("formOk"), btn = $("submitBtn");
+  err.hidden = true; ok.hidden = true;
+  const anon = $("fAnon").checked;
+  const name = anon ? "Anonymous well-wisher" : $("fName").value.trim();
+  const amount = parseAmt(amountInput.value);
+  const message = $("fMsg").value.trim();
+  if (!name) { err.textContent = "Add your name, or tick Anonymous."; err.hidden = false; return; }
+  if (!amount || amount < 100) { err.textContent = "Enter the amount you sent (at least ₦100)."; err.hidden = false; return; }
+  btn.disabled = true; btn.textContent = "Signing…";
+  try {
+    const r = await fetch(API, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ name, amount, message }) });
+    const d = await r.json().catch(() => ({}));
+    if (!r.ok) throw new Error(d.error || "Couldn't save that. Try again in a moment.");
+    e.target.reset(); $("fName").disabled = false;
+    ok.textContent = "Thank you. You're on the wall, and she's one step closer."; ok.hidden = false;
+    await load();
+  } catch (x) {
+    err.textContent = x.message; err.hidden = false;
+  } finally {
+    btn.disabled = false; btn.textContent = "Sign the wall";
+  }
+});
+
+wireCopy("copyBtn", () => CONFIG.accountNumber);
+wireCopy("copyNar", () => CONFIG.narration);
+addEventListener("hashchange", route);
+paintStatic(); route(); load();
+setInterval(() => { if (!document.hidden) load(); }, 30000);
+</script>
+
+
+</body>
+</html>
